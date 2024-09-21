@@ -1,0 +1,462 @@
+body{
+  padding: 20px;
+
+}
+
+/* Base container */
+.container {
+  background-color: #000; /* Black background */
+  color: #fff;
+  font-family: sans-serif;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+/* Dashboard styling */
+.dashboard {
+  background-color: #111; /* Darker black for dashboard */
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+/* Header section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+}
+
+.bell-icon,
+.grid-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/* Heading styles */
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+/* Fixed header with logo */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000; /* Black background for the header */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1000; /* Ensures header stays on top */
+}
+
+.logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.field-title {
+  text-align: center; /* Align the title in the center */
+  padding: 10px 0; /* Add padding for spacing */
+  color: white;
+}
+
+/* Adjust content to avoid overlap with fixed header */
+.content {
+  margin-top: 80px; /* Adds space so the content doesn't overlap the header */
+}
+
+h1 {
+  color: rgb(9, 136, 9);
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+h2 {
+  color: rgb(66, 66, 66);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+
+
+/* Buttons for crop, location, and area selection */
+.crop-selection,
+.location-selection,
+.area-selection {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.crop-button,
+.location-button,
+.area-button {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+  flex: 1 1 20%;
+  box-sizing: border-box;
+}
+
+.crop-button:hover,
+.location-button:hover,
+.area-button:hover {
+  background-color: #333;
+}
+
+.crop-button.active,
+.location-button.active,
+.area-button.active {
+  background-color: #4CAF50;
+}
+
+/* Location details styling */
+.location-details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.location-map {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Average rain section */
+.average-rain {
+  text-align: center;
+}
+
+/* Yield section */
+.total-yield {
+  margin-bottom: 20px;
+}
+
+.yield-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* API fetch button */
+.api-fetch {
+  margin-bottom: 20px;
+}
+
+/* Sensor data table styling */
+.sensor-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #555;
+}
+
+.sensor-data-table th,
+.sensor-data-table td {
+  padding: 12px;
+  border: 1px solid #555;
+  text-align: left;
+}
+
+.sensor-data-table th {
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.sensor-data-table td {
+  background-color: #222;
+  color: #fff;
+}
+
+.sensor-data-table tr:hover {
+  background-color: #444;
+}
+
+.punjab-weather {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.punjab-weather h3, .punjab-weather h4 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.punjab-weather table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.punjab-weather th, .punjab-weather td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.punjab-weather th {
+  background-color: #4CAF50; /* Green background for header */
+  color: white; /* White text for header */
+  font-weight: bold;
+}
+
+.punjab-weather tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra striping for even rows */
+}
+
+.punjab-weather tr:hover {
+  background-color: #e9f5e9; /* Highlight row on hover */
+}
+
+.punjab-weather td {
+  font-size: 14px; /* Adjust font size for data */
+  color: #555; /* Dark grey text for data */
+}
+
+.haryana-weather {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.haryana-weather h3, .haryana-weather h4 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.haryana-weather table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.haryana-weather th, .haryana-weather td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.haryana-weather th {
+  background-color: #4CAF50; /* Green background for header */
+  color: white; /* White text for header */
+  font-weight: bold;
+}
+
+.haryana-weather tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra striping for even rows */
+}
+
+.haryana-weather tr:hover {
+  background-color: #e9f5e9; /* Highlight row on hover */
+}
+
+.haryana-weather td {
+  font-size: 14px; /* Adjust font size for data */
+  color: #555; /* Dark grey text for data */
+}
+
+.delhi-weather {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.delhi-weather h3, .delhi-weather h4 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.delhi-weather table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.delhi-weather th, .delhi-weather td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.delhi-weather th {
+  background-color: #4CAF50; /* Green background for header */
+  color: white; /* White text for header */
+  font-weight: bold;
+}
+
+.delhi-weather tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra striping for even rows */
+}
+
+.delhi-weather tr:hover {
+  background-color: #e9f5e9; /* Highlight row on hover */
+}
+
+.delhi-weather td {
+  font-size: 14px; /* Adjust font size for data */
+  color: #555; /* Dark grey text for data */
+}
+
+.uttar-pradesh-weather {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.uttar-pradesh-weather h3, .uttar-pradesh-weather h4 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.uttar-pradesh-weather table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.uttar-pradesh-weather th, .uttar-pradesh-weather td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.uttar-pradesh-weather th {
+  background-color: #4CAF50; /* Green background for header */
+  color: white; /* White text for header */
+  font-weight: bold;
+}
+
+.uttar-pradesh-weather tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra striping for even rows */
+}
+
+.uttar-pradesh-weather tr:hover {
+  background-color: #e9f5e9; /* Highlight row on hover */
+}
+
+.uttar-pradesh-weather td {
+  font-size: 14px; /* Adjust font size for data */
+  color: #555; /* Dark grey text for data */
+}
+
+.location-map {
+  width: 600px;      /* Set the width of the image */
+  height: auto;      /* Maintain aspect ratio */
+  max-width: 100%;   /* Ensure responsiveness */
+  margin-top: 20px;  /* Add some space above the image */
+}
+
+.api-fetch {
+  text-align: center; /* Center the button */
+  margin-top: 20px; /* Add space above the button */
+}
+
+.api-fetch button {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* Remove border */
+  color: white; /* White text */
+  padding: 15px 32px; /* Vertical and horizontal padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Display as inline-block */
+  font-size: 16px; /* Font size */
+  margin: 4px 2px; /* Margin around the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.api-fetch button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+
+@media (max-width: 250px) {
+  .location-map {
+    width: 500px;    /* Adjust size for smaller screens */
+  }
+}
+
+
+/* Mobile-optimized layout */
+@media (max-width: 768px) {
+  .dashboard {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .crop-button,
+  .location-button,
+  .area-button {
+    flex: 1 1 48%;
+  }
+
+  .yield-value {
+    font-size: 1.3rem;
+  }
+
+  .sensor-data-table th,
+  .sensor-data-table td {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .crop-button,
+  .location-button,
+  .area-button {
+    flex: 1 1 100%;
+  }
+
+  .sensor-data-table th,
+  .sensor-data-table td {
+    font-size: 0.8rem;
+  }
+
+  .location-map {
+    max-width: 200px;
+  }
+}
