@@ -479,16 +479,4 @@ Should see first reading within 10 minutes
 | Local Data Storage | 7 days on SD card |
 | Control Loop Speed | 5 minutes for water quality, 15 min for irrigation |
 
-## Support & Resources
-
-- **Wiring Diagrams:** `docs/wiring_diagram.pdf`
-- **Video Setup Guide:** [YouTube Playlist](https://youtube.com/fieldindia-setup)
-- **Community Forum:** [community.fieldindia.co.in](http://community.fieldindia.co.in)
-- **Technical Support:** iot-support@fieldindia.co.in
-- **Emergency Hotline:** +91-XXXXXXXXXX (24/7)
-
----
-
-**The FIELD INDIA IoT system brings industrial-grade automation to small and medium farms, ensuring optimal growing conditions while minimizing resource waste and manual labor.**
-
 
